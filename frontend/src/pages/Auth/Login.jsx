@@ -13,7 +13,7 @@ const Login = () => {
     // NE JAMAIS FAIRE CELA
     const [credentials, setCredentials] = useState({
         email: 'admin@admin.admin',
-        password: 'nimdaghjghgj'
+        password: 'nimda'
     })
     
     // Gestion de la modification des champs du formulaire
