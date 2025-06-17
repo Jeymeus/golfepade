@@ -36,7 +36,7 @@ jobs:
       BDD_HOST: 127.0.0.1
       BDD_NAME: test
       BDD_USER: test
-      BDD_PASSWORD: test
+      BDD_PASS: test
 
     steps:
       - name: Checkout
@@ -59,7 +59,7 @@ jobs:
         run : npm run initbdd
 
       - name: Populate BDD
-        run: mysql -u root -ptoor --hoste 127.0.0.1 --port 3306 --database test < ./test/insert_test_user.sql
+        run: mysql -u root -ptoor --host 127.0.0.1 --port 3306 --database test < ./test/insert_test_user.sql
 
       - name: Run all test and coverage
         run: npm run test:cov
