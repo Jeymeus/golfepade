@@ -35,6 +35,6 @@ jobs:
             docker pull ghcr.io/jeymeus/golfepade-back:latest
             docker pull ghcr.io/jeymeus/golfepade-front:latest
 
-            docker-compose up -d
+            docker compose up -d
 
       
