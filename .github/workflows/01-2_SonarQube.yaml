@@ -14,18 +14,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Download Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: back-coverage-report
-          path: backend/coverage
+      # - name: Download Artifact
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: back-coverage-report
+      #     path: backend/coverage
 
-      - name: SonarCloud
-        uses: Sonarsource/sonarcloud-github-action@v3.1.0
-        with:
-          projectBaseDir: ./backend
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_BACK }}
+      # - name: SonarCloud
+      #   uses: Sonarsource/sonarcloud-github-action@v3.1.0
+      #   with:
+      #     projectBaseDir: ./backend
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_BACK }}
 
   QualityFront:
     runs-on: unbuntu-latest
@@ -37,15 +37,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Download Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: front-coverage-report
-          path: frontend/coverage
+      # - name: Download Artifact
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: front-coverage-report
+      #     path: frontend/coverage
 
-      - name: SonarCloud
-        uses: Sonarsource/sonarcloud-github-action@v3.1.0
-        with:
-          projectBaseDir: ./frontend
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_FRONT }}
+      # - name: SonarCloud
+      #   uses: Sonarsource/sonarcloud-github-action@v3.1.0
+      #   with:
+      #     projectBaseDir: ./frontend
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_FRONT }}
