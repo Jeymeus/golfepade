@@ -32,8 +32,8 @@ jobs:
 
           script: |
             echo ${{ secrets.MONOREPO_PAT }} | docker login ghcr.io -u Jeymeus --password-stdin
-            docker pull ghcr.io/jeymeus/golfepade-back:latest
-            docker pull ghcr.io/jeymeus/golfepade-front:latest
+            docker pull ghcr.io/jeymeus/golfepade-back:cherchetrouve
+            docker pull ghcr.io/jeymeus/golfepade-front:cherchetrouve
 
             docker compose up -d
 
