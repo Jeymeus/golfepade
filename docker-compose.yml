@@ -24,7 +24,7 @@ services:
 
   golf_backend:
     container_name: golf_backend
-    image: ghcr.io/jeymeus/golfepade-back:latest
+    image: ghcr.io/jeymeus/golfepade-back:cherchetrouve
     # build: ./backend/.
     environment:
       BDD_HOST: golf_bdd
@@ -36,7 +36,7 @@ services:
 
   golf_frontend:
     container_name: golf_frontend
-    image: ghcr.io/jeymeus/golfepade-front:latest
+    image: ghcr.io/jeymeus/golfepade-front:cherchetrouve
     # build: ./frontend/.
     ports:
       - 80:80
